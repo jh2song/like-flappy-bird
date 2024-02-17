@@ -18,11 +18,19 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-
     }
 
     private void Update()
     {
+        if (transform.position.y > 5f)
+        {
+            curDir = Dir.Down;
+        }
+        else if (transform.position.y < -5f)
+        {
+            curDir = Dir.Up;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             if (curDir == Dir.Up)
