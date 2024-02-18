@@ -16,17 +16,21 @@ public class Player : MonoBehaviour
 
     Dir curDir = Dir.Up;
 
+    // 매직넘버 방지
+    private float _yUpperEnd = 5f;
+    private float _yLowerEnd = -5f;
+
     private void Start()
     {
     }
 
     private void Update()
     {
-        if (transform.position.y > 5f)
+        if (transform.position.y > _yUpperEnd)
         {
             curDir = Dir.Down;
         }
-        else if (transform.position.y < -5f)
+        else if (transform.position.y < _yLowerEnd)
         {
             curDir = Dir.Up;
         }
