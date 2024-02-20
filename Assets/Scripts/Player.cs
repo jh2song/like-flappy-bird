@@ -8,13 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _speed = 10f;
 
-    enum Dir
-    {
-        Up,
-        Down,
-    }
 
-    Dir curDir = Dir.Up;
+    Define.PlayerDir curDir = Define.PlayerDir.Up;
 
     // 매직넘버 방지
     private float _yUpperEnd = 5f;
@@ -28,27 +23,27 @@ public class Player : MonoBehaviour
     {
         if (transform.position.y > _yUpperEnd)
         {
-            curDir = Dir.Down;
+            curDir = Define.PlayerDir.Down;
         }
         else if (transform.position.y < _yLowerEnd)
         {
-            curDir = Dir.Up;
+            curDir = Define.PlayerDir.Up;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (curDir == Dir.Up)
-                curDir = Dir.Down;
-            else if (curDir == Dir.Down)
-                curDir = Dir.Up;
+            if (curDir == Define.PlayerDir.Up)
+                curDir = Define.PlayerDir.Down;
+            else if (curDir == Define.PlayerDir.Down)
+                curDir = Define.PlayerDir.Up;
         }
 
         switch (curDir)
         {
-            case Dir.Up:
+            case Define.PlayerDir.Up:
                 transform.Translate(Vector2.up * _speed * Time.deltaTime);
                 break;
-            case Dir.Down:
+            case Define.PlayerDir.Down:
                 transform.Translate(Vector2.down * _speed * Time.deltaTime);
                 break;
         }
