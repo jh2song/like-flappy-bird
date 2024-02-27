@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     private Spawner _spawner = new Spawner();
     #endregion
 
+    // ╫л╠шеох╜
     public static Manager Instance
     {
         get
