@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class Manager : MonoBehaviour
     private Spawner _spawner = new Spawner();
     #endregion
 
-    // ½Ì±ÛÅÏÈ­
+    // ì‹±ê¸€í„´í™”
     public static Manager Instance
     {
         get

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     Define.PlayerDir curDir = Define.PlayerDir.Up;
 
-    // ¸ÅÁ÷³Ñ¹ö ¹æÁö
+    // ë§¤ì§ë„˜ë²„ ë°©ì§€
     private float _yUpperEnd = 5f;
     private float _yLowerEnd = -5f;
 

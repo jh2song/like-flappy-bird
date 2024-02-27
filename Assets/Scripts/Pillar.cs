@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ public class Pillar : MonoBehaviour
     [SerializeField]
     private float _speed = 5f;
 
-    // ¸ÅÁ÷³Ñ¹ö ¹æÁö
+    // ë§¤ì§ë„˜ë²„ ë°©ì§€
     private float _xEnd = -15f;
 
     private void Start()
