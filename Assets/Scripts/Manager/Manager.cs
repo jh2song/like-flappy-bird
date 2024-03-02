@@ -39,15 +39,14 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        
+        _spawnerMgr.Init();
+
+
+        StartCoroutine(_spawnerMgr.Spawn());
     }
 
     private void Update()
     {
-        // 2초 마다 _spawnerMgr의 Spawn()을 호출
-        // InvokeRepeating 사용
-        
-        // Invoke 방식은 여기에 적용할 수 없음
-        // 코루틴 사용
+
     }
 }
