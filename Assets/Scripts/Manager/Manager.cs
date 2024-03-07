@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
     public static Manager instance = null;
+
+    public TextMeshProUGUI ScoreTxt;
 
     #region Contents
     private SpawnManager _spawnerMgr = new SpawnManager();
@@ -48,5 +51,12 @@ public class Manager : MonoBehaviour
     private void Update()
     {
 
+    }
+
+    public void ScoreUp()
+    {
+        int curScore = int.Parse(ScoreTxt.text);
+        curScore++;
+        ScoreTxt.text = curScore.ToString();
     }
 }

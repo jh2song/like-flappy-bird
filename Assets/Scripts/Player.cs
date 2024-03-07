@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     {
     }
 
+    // 리펙토링 필요 -> 모듈화
     private void Update()
     {
         if (transform.position.y > _yUpperEnd)
@@ -46,6 +47,14 @@ public class Player : MonoBehaviour
             case Define.PlayerDir.Down:
                 transform.Translate(Vector2.down * _speed * Time.deltaTime);
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Score")
+        {
+            Manager.instance.ScoreUp();
         }
     }
 }
