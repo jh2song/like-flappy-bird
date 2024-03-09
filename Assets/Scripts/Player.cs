@@ -52,9 +52,15 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // 구멍안에 들어갔을때
         if (collision.tag == "Score")
         {
             Manager.instance.ScoreUp();
+        }
+        // 기둥에 맞았을때
+        else if (collision.tag == "Finish")
+        {
+            Manager.instance.GameOver();
         }
     }
 }
